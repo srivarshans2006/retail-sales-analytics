@@ -127,6 +127,17 @@ def chat_ai():
 
     return jsonify({"answer":response["message"]["content"]})
 
+@app.route("/sales",methods=["GET","POST"])
+
+def sale_table():
+    conn=sqlite3.connect("sales.db")
+    conn.row_factory=sqlite3.Row
+    cursor=conn.cursor()
+    cursor.execute("SELECT * FROM sales")
+    sales=cursor.fetchall()
+    cursor.close()
+    return render_template("sales.html",sales=sales)
+
 
 
 

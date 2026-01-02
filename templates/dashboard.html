@@ -6,11 +6,25 @@
     <title>Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <style>
+        @media print{
+            .print-dash{
+                display:none;
+            }
+            
+        }
+    </style>
+
 </head>
 <body>
-    <h2>Sales dashboard</h2>
-    <a href="/chat">Open AI Chatbot</a>
-
+    <h2 style="text-align:center;">Sales dashboard</h2>
+    <div class="print-dash">
+        <a href="/chat">Open AI Chatbot</a>
+        <br><br>
+    
+        <button onclick="window.print()">Print</button>
+    </div>
+    
 
    
 <div style="width:90%; margin:30px auto;">

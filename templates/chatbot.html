@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiwis ChatBot</title>
+</head>
+<body>
+    <h2>Sales assistant</h2>
+
+    <input type="text" id="question" placeholder="Ask any questions...">
+    <button onclick="askAI()">Ask chatbot</button>
+
+    <p>Your response:</p>
+    <div id="answer"></div>
+
+    <script>
+        async function askAI()
+        {
+                const question=document.getElementById("question").value;
+
+                const result=await fetch("/chat-ai",{
+                    
+                        method:"POST",
+                        headers:{"Content-Type":"application/json"},
+                        body:JSON.stringify({question})
+                    });
+                    const data=await result.json();
+                    document.getElementById("answer").innerText=data.answer;
+
+        }
+        
+    </script>
+    
+</body>
+</html>

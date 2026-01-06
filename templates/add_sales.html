@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
 </head>
 <body>
-    <h2>Add sales</h2>
+    <h2></h2>
+    <nav>
+        <ul>
+            <li class="i"><a>SalesAnalytics</a></li>
+            <li class="i" > <a href="/add-sale" >Home</a></li>
+            <li class="i"><a href="/dashboard">Dashboard</a></li>
+            <li class="i"><a href="/chat">Chatbot</a></li>
+            <li class="i"><a href="/add-sale">Add sales</a></li>
+            
+        </ul>
+    </nav>
     <form method="post">
         Date:<input type="date" name="date" required><br><br>
         Product:<input type="text" name="product" required ><br><br>

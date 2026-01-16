@@ -30,7 +30,7 @@ def register():
             return redirect(url_for("login"))
         except sqlite3.IntegrityError:
             conn.close()
-            return render_template("regsiter.html",error="Username already exist")
+            return render_template("register.html",error="Username already exist")
     return render_template("register.html")
 
 
@@ -49,12 +49,15 @@ def login():
 
         if user and check_password_hash(user[0],password):
             session["user"]=username
-            return redirect(url_for("add_sale"))
+            return redirect(url_for("home_page"))
         else:
             return render_template("loginpage.html",error="Invalid username or password")
         
     return render_template("loginpage.html")
 
+@app.route("/home-page")
+def home_page():
+    return render_template("Home.html")
 
 
 @app.route("/add-sale",methods=["GET","POST"])
@@ -137,6 +140,11 @@ def sale_table():
     sales=cursor.fetchall()
     cursor.close()
     return render_template("sales.html",sales=sales)
+
+@app.route("/logout")
+def logout():
+    session.clear()
+    return redirect(url_for("login"))
 
 
 

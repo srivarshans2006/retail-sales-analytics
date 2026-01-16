@@ -10,11 +10,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&family=Lobster&family=Michroma&family=Smooch+Sans:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&family=Michroma&family=Smooch+Sans:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
 </head>
 <body>
-    <h2>Kiwi</h2>
+
+    <nav class="navbar">
+      
+        <h1>AnalticaX</h1>
+        <div class="navbar-links">
+            <p class="navbar-link"><a href="{{url_for('home_page')}}">Home</a></p>
+            <p class="navbar-link"><a href="{{url_for('add_sale')}}">Add sales</a></p>
+            <p class="navbar-link"><a href="{{url_for('dashboard')}}">Dashboard</a></p>
+            <p class="navbar-link"><a href="{{url_for('chat_page')}}">Kiwi </a></p>
+            <p class="navbar-link"><a href="{{url_for('sale_table')}}">Sales Details</a></p>
+        </div>
+
+       <div class="toogle-button" onclick="tooglesidebar()">
+        <i class="fa-solid fa-bars" ></i>
+       </div>
+   </nav>
+
+   <div class="side-navbar">
+    <p class="cross" onclick="closesidebar()">
+        <i class="fa-solid fa-xmark" ></i>
+    </p>
+    <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="{{url_for('home_page')}}">Home</a></p>
+            <p class="side-navbar-link"><a href="{{url_for('add_sale')}}">Add sales</a></p>
+            <p class="side-navbar-link"><a href="{{url_for('dashboard')}}">Dashboard</a></p>
+            <p class="side-navbar-link"><a href="{{url_for('chat_page')}}">Kiwi </a></p>
+            <p class="side-navbar-link"><a href="{{url_for('sale_table')}}">Sales Details</a></p>
+     </div>
+   </div>
+    
 
     <div class="input-box">
          <input type="text" id="question" placeholder="Ask any questions...">
@@ -89,6 +120,16 @@
                     
 
         }
+
+            var sidebar=document.querySelector(".side-navbar");
+            function tooglesidebar(){
+            sidebar.style.left="0";
+
+            }
+            function closesidebar(){
+            sidebar.style.left="-60%"
+
+            }
         
     </script>
     

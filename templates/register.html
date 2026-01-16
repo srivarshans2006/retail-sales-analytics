@@ -4,21 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register page</title>
+    <link rel=stylesheet href="{{url_for('static',filename='css/login.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&family=Lobster&family=Michroma&family=Smooch+Sans:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <h2>Register page</h2>
+    <p class="title">AnalticaX</p>
+    
     {% if error %}
     <p style="color:red">{{error}}</p>
     {%endif %}
-
-    <form method="POST">
-        <input type="text" name="username" placeholder="Enter the Usernmae" required>
-        <input type="password" name="password" placeholder="Enter the password" required>
-        <button type="submit">Sign up</button>
+    <div class="login">
+        <h2>Register page</h2>
+        <form method="POST">
+        <label>Username</label><br>
+        <input type="text" name="username"  required id="username">
+        <label>Password</label><br>
+        <input type="password" name="password"  required id="password">
+        <button type="submit" id="log-button">Sign up</button>
 
 
     </form>
     <p>Already Registered ?<a href="/login">Sign in</a></p>
+
+    </div>
+
+    
 
     
 </body>

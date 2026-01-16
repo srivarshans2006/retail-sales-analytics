@@ -1,5 +1,8 @@
 
-
+*{
+    margin:0px;
+    padding:0px;
+}
 
 
 
@@ -17,6 +20,15 @@ body{
     
 }
 
+
+.title {
+    font-family:Lobster;
+    position: fixed;   
+    top: 0px;
+    left: 5px;
+    font-size: 28px;
+    font-weight: bold;
+}
 .login h2{
     font-size: 30px;
 }

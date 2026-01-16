@@ -5,30 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&family=Michroma&family=Smooch+Sans:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
-    <h2></h2>
-    <nav>
-        <ul>
-            <li class="i"><a>SalesAnalytics</a></li>
-            <li class="i" > <a href="/add-sale" >Home</a></li>
-            <li class="i"><a href="/dashboard">Dashboard</a></li>
-            <li class="i"><a href="/chat">Chatbot</a></li>
-            <li class="i"><a href="/add-sale">Add sales</a></li>
-            
-        </ul>
-    </nav>
-    <form method="post">
-        Date:<input type="date" name="date" required><br><br>
-        Product:<input type="text" name="product" required ><br><br>
-        Category:<input type="text" name="category" required><br><br>
-         Quantity: <input type="number" name="quantity" required><br><br>
-         Price: <input type="number" step="0.01" name="price" required><br><br>
-         <button type="submit">Add Sale</button>
+    
+   <nav class="navbar">
+      
+        <h1>AnalticaX</h1>
+        <div class="navbar-links">
+            <p class="navbar-link"><a href="{{url_for('home_page')}}">Home</a></p>
+            <p class="navbar-link"><a href="{{url_for('add_sale')}}">Add sales</a></p>
+            <p class="navbar-link"><a href="{{url_for('dashboard')}}">Dashboard</a></p>
+            <p class="navbar-link"><a href="{{url_for('chat_page')}}">Kiwi </a></p>
+            <p class="navbar-link"><a href="{{url_for('sale_table')}}">Sales Details</a></p>
+        </div>
+
+       <div class="toogle-button" onclick="tooglesidebar()">
+        <i class="fa-solid fa-bars" ></i>
+       </div>
+   </nav>
+
+   <div class="side-navbar">
+    <p class="cross" onclick="closesidebar()">
+        <i class="fa-solid fa-xmark" ></i>
+    </p>
+    <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="{{url_for('home_page')}}" >Home</a></p>
+            <p class="side-navbar-link"><a href="{{url_for('add_sale')}}">Add sales</a></p>
+            <p class="side-navbar-link"><a href="{{url_for('dashboard')}}">Dashboard</a></p>
+            <p class="side-navbar-link"><a href="{{url_for('chat_page')}}">Kiwi </a></p>
+            <p class="side-navbar-link"><a href="{{url_for('sale_table')}}">Sales Details</a></p>
+     </div>
+   </div>
+    <div class="page">
+        <div class="add-sale">
+            <h2>Add sale</h2>
+            <form method="post">
+                <label name="date">Date</label>
+                <input type="date" name="date" required>
+                <label name="product">Product Name</label>
+                <input type="text" name="product" required >
+                <label name="category">Category</label>
+                <input type="text" name="category" required>
+                <label name="quantity">Quantity</label>
+                <input type="number" name="quantity" required>
+                <label name="price">Price</label>
+                <input type="number" step="0.01" name="price" required>
+                <button type="submit">Add Sale</button>
 
 
 
-    </form>
+        </form>
+
+
+    </div>
+
+
+    </div>
+   
+
+    
+    
+   <script>
+       var sidebar=document.querySelector(".side-navbar");
+       function tooglesidebar(){
+        sidebar.style.left="0";
+
+       }
+       function closesidebar(){
+        sidebar.style.left="-60%"
+
+       }
+   </script>
     
 </body>
+
 </html>

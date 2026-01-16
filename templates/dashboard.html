@@ -1,47 +1,82 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel=stylesheet href="{{url_for('static',filename='css/dash.css')}}">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&family=Michroma&family=Smooch+Sans:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <style>
-        @media print{
-            .print-dash{
-                display:none;
-            }
-            
-        }
-    </style>
+    
 
 </head>
 <body>
-    <h2 style="text-align:center;">Sales dashboard</h2>
-    <div class="print-dash">
-        <a href="/chat">Open AI Chatbot</a>
-        <br><br>
-    
-        <button onclick="window.print()">Print</button>
-    </div>
+    <nav class="navbar">
+      
+        <h1>AnalticaX</h1>
+        <div class="navbar-links">
+            <p class="navbar-link"><a href="{{url_for('home_page')}}">Home</a></p>
+            <p class="navbar-link"><a href="{{url_for('add_sale')}}">Add sales</a></p>
+            <p class="navbar-link"><a href="{{url_for('dashboard')}}">Dashboard</a></p>
+            <p class="navbar-link"><a href="{{url_for('chat_page')}}">Kiwi </a></p>
+            <p class="navbar-link"><a href="{{url_for('sale_table')}}">Sales Details</a></p>
+        </div>
+
+       <div class="toogle-button" onclick="tooglesidebar()">
+        <i class="fa-solid fa-bars" ></i>
+       </div>
+   </nav>
+
+   <div class="side-navbar">
+    <p class="cross" onclick="closesidebar()">
+        <i class="fa-solid fa-xmark" ></i>
+    </p>
+    <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="{{url_for('home_page')}}" >Home</a></p>
+            <p class="side-navbar-link"><a href="{{url_for('add_sale')}}">Add sales</a></p>
+            <p class="side-navbar-link"><a href="{{url_for('dashboard')}}">Dashboard</a></p>
+            <p class="side-navbar-link"><a href="{{url_for('chat_page')}}">Kiwi </a></p>
+            <p class="side-navbar-link"><a href="{{url_for('sale_table')}}">Sales Details</a></p>
+     </div>
+   </div>
+
+    <h2 class="subtitle">Sales dashboard</h2>
     
 
    
 <div style="width:90%; margin:30px auto;">
     <canvas id="categoryChart" height="120"></canvas>
 </div>
-    
 
 <div style="width:90%; margin:30px auto;">
     <canvas id="monthlyChart" height="120"></canvas>
 </div>
 
+<div class="print-dash">
+        <button onclick="window.print()">Print</button>
+</div>
+
     <script>
         const categoryData={{category_sales | tojson | safe}};
         const monthlyData={{monthly_sales | tojson | safe}};
+
+
+        var sidebar=document.querySelector(".side-navbar");
+        function tooglesidebar(){
+            sidebar.style.left="0";
+
+        }
+        function closesidebar(){
+            sidebar.style.left="-60%"
+
+        }
         
     </script>
 
     <script src="{{url_for('static',filename='js/charts.js')}}"></script>
 </body>
 </html>
+

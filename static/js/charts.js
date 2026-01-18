@@ -14,44 +14,33 @@ new Chart(document.getElementById("categoryChart") ,{
         ]
     },
     options: {
-        plugins: {
-            legend: {
-                labels: {
-                    color: '#000',        
-                    font: {
-                        size: 14,
-                        weight: 'bold'
-                    }
-                }
-            }
-        },
-        scales: {
-            x: {
-                ticks: {
-                    color: '#000',        
-                    font: {
-                        size: 13,
-                        weight: 'bold'
-                    }
-                },
-                grid: {
-                    color: 'rgba(0,0,0,0.1)'
-                }
-            },
-            y: {
-                ticks: {
-                    color: '#000',        
-                    font: {
-                        size: 13,
-                        weight: 'bold'
-                    }
-                },
-                grid: {
-                    color: 'rgba(0,0,0,0.1)'
-                }
-            }
-        }
+  plugins: {
+    title: {
+      display: true,
+      text: "Category-wise Sales Distribution",
+      color: "#010000",
+      font: { size: 22, weight: "600" }
+    },
+    legend: {
+      labels: {
+        color: "#010000",
+        font: { size: 14, weight: "500" }
+      }
     }
+  },
+  scales: {
+    x: {
+      ticks: { color:"#010000" },
+      grid: { color: "rgba(255,255,255,0.15)" }
+    },
+    y: {
+      ticks: { color:"#010000" },
+      grid: { color: "rgba(255,255,255,0.15)" }
+    }
+  }
+}
+
+    
 });
 
 
@@ -70,42 +59,30 @@ new Chart(document.getElementById("monthlyChart") ,{
     },
 
     options: {
-        plugins: {
-            legend: {
-                labels: {
-                    color: '#000',       
-                    font: {
-                        size: 14,
-                        weight: 'bold'
-                    }
-                }
-            }
-        },
-        scales: {
-            x: {
-                ticks: {
-                    color: '#000',       
-                    font: {
-                        size: 13,
-                        weight: 'bold'
-                    }
-                },
-                grid: {
-                    color: 'rgba(0,0,0,0.1)'
-                }
-            },
-            y: {
-                ticks: {
-                    color: '#000',       
-                    font: {
-                        size: 13,
-                        weight: 'bold'
-                    }
-                },
-                grid: {
-                    color: 'rgba(0,0,0,0.1)'
-                }
-            }
-        }
+  plugins: {
+    title: {
+      display: true,
+      text: "Monthly Sales Overview",
+      color:"#010000",
+      font: { size: 22, weight: "600" }
+    },
+    legend: {
+      labels: {
+        color: "#010000",
+        font: { size: 14, weight: "500" }
+      }
     }
+  },
+  scales: {
+    x: {
+      ticks: { color: "#010000" },
+      grid: { color: "rgba(255,255,255,0.15)" }
+    },
+    y: {
+      ticks: { color:"#010000" },
+      grid: { color: "rgba(255,255,255,0.15)" }
+    }
+  }
+}
+
 });

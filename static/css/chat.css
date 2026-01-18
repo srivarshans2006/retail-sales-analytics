@@ -3,7 +3,11 @@
     padding:0;
 }
 body{
-    background: linear-gradient(135deg, #667eea, #764ba2);
+   background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.85),
+    rgba(118, 75, 162, 0.85)
+  );
 }
 .send-butt{
     border-radius: 50%;
@@ -25,7 +29,8 @@ h1{
     width: 70%;
     position:fixed;
     bottom:30px;
-    left:15%
+    left:15%;
+    border:none;
     
     
 }
@@ -34,6 +39,7 @@ h1{
     border:none;
     padding:15px;
     width:100%;
+    outline:none;
 }
 
 .bot-loading{
@@ -136,7 +142,8 @@ h2{
 .navbar-links a{
     text-decoration: none;
     font-family: 'Smooch Sans', sans-serif;
-    color:black;
+    color: #1f2937; 
+    font-weight: 500;
     cursor:pointer;
     font-size: 20px;
     
@@ -188,4 +195,25 @@ h2{
 }
 .cross{
     text-align: right;
+}
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+h3{
+    font-family: Smooch Sans;
+    font-size: 24px;
+    background-color: aliceblue;
+    padding:10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+
+   
+    
+    
+}
+h3:hover{
+    transform: scale(1.05);
 }

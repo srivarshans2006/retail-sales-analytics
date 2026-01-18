@@ -15,7 +15,11 @@ body{
     min-height:100vh;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.85),
+    rgba(118, 75, 162, 0.85)
+  );
     
     
 }
@@ -31,6 +35,9 @@ body{
 }
 .login h2{
     font-size: 30px;
+     letter-spacing: 0.5px;
+     color: #1f2937; 
+  font-weight: 600;
 }
 
 .login form{
@@ -46,7 +53,12 @@ body{
     border-radius:10px; 
     flex-direction:column;
     align-items:center;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: rgba(255, 255, 255, 0.12); 
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
     
     
 
@@ -58,6 +70,7 @@ body{
     padding:10px;
     border-radius:10px;
     outline: none;
+    border:none;
 }
 
 #log-button{
@@ -66,9 +79,11 @@ body{
     align-self: center;
     margin-top:30px;
     width:100%;
-    background-color:aquamarine;
+    background-color:rgb(11, 179, 93);
     outline:none;
     font-weight: bolder;
+    border:none;
+     color: #f9fafb;
 
 
 
@@ -77,8 +92,18 @@ body{
 .login label{
     margin-top:6px;
     font-weight: bolder;
+    letter-spacing: 0.5px;
+
+     color: #f9fafb;
 }
 
 .login p{
     font-weight: bold;
+    color: #1f2937; 
+    
+}
+
+.reg{
+    margin-top:20px;
+     
 }

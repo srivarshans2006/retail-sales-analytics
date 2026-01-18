@@ -10,13 +10,11 @@ body{
     
     font-size: 20px;
     
-    background: linear-gradient(
-        135deg,
-        #667eea,
-        #6f6fe0,
-        #7367d6,
-        #764ba2
-    );
+   background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.85),
+    rgba(118, 75, 162, 0.85)
+  );
 
     background-size: 300% 300%;
     animation: gradientMove 12s ease infinite;
@@ -59,7 +57,12 @@ h1{
     border:black solid 2px;
     padding:20px;
     border-radius:10px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: rgba(255, 255, 255, 0.12); /* glass effect */
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -68,6 +71,7 @@ h1{
     flex-direction: column;
     gap:20px;
     width:400px;
+    margin-top:10px;
     
    
 }
@@ -75,7 +79,8 @@ h1{
 form input{
     padding:10px;
     border-radius: 10px;
-    outline: none;
+    
+    border:none;
 }
 
 form button{
@@ -83,11 +88,17 @@ form button{
     border-radius:10px;
     margin-top:20px;
     outline:none;
-    background-color: aqua;
+    background-color:rgb(11, 179, 93);
+    border:none;
 }
 
 form label{
     font-weight: bolder;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+  letter-spacing: 0.3px;
+
+
 
 }
 
@@ -116,7 +127,8 @@ form label{
 
 .navbar-links a{
     text-decoration: none;
-    color:black;
+    color: #1f2937; 
+    font-weight: 500;
     cursor:pointer;
     font-size: 20px;
     
@@ -198,4 +210,9 @@ form label{
         font-size: 16px;
         padding: 12px;
     }
+}
+.add-sale h2{
+    text-align:center;
+    color: #1f2937; 
+
 }

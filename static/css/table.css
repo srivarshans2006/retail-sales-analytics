@@ -26,7 +26,7 @@ h1{
             background-color: rgb(206, 229, 149);
             border:solid 2px;
             border-radius:5px ;
-            padding:20px;
+            padding:10px;
             
 
             
@@ -46,11 +46,16 @@ h1{
     color:crimson;
 
  }
+
+ .sales_details{
+    
+ }
 th,td
 {
             border:1px solid black;
-            padding:8px;
+            padding:2px;
             text-align:center;
+            font-size: 14px;
 }
 tr:hover{
     background-color: #c1e38f;
@@ -74,7 +79,11 @@ th
 }
 
 body{
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.85),
+    rgba(118, 75, 162, 0.85)
+  );
 }
 
 .print-button{
@@ -89,12 +98,14 @@ body{
 .print-button button{
     padding:10px;
     border-radius: 10px;
-    background-color: aqua;
+    background-color:rgb(11, 179, 93);
+    border:none;
+    color: white;
     padding: 12px 20px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    
 
 
 }
@@ -118,7 +129,8 @@ body{
 .navbar-links a{
     text-decoration: none;
     font-family: 'Smooch Sans', sans-serif;
-    color:black;
+    color: #1f2937; 
+    font-weight: 500;
     cursor:pointer;
     font-size: 20px;
     

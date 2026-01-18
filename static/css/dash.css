@@ -4,28 +4,15 @@
     padding:0;
 }
 body{
-    background: linear-gradient(
-        135deg,
-        #667eea,
-        #6f6fe0,
-        #7367d6,
-        #764ba2
-    );
-    animation: gradientMove 12s ease infinite;
+   background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.85),
+    rgba(118, 75, 162, 0.85)
+  );
 
 }
 
-@keyframes gradientMove {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
+
 
 
 @media print{
@@ -34,6 +21,9 @@ body{
             }
             .navbar{
                 display:none !important;
+            }
+            canvas{
+                box-shadow:none !important;
             }
             
         }
@@ -65,7 +55,8 @@ h1{
 .navbar-links a{
     text-decoration: none;
     font-family: 'Smooch Sans', sans-serif;
-    color:black;
+    color: #1f2937; 
+    font-weight: 500;
     cursor:pointer;
     font-size: 20px;
     
@@ -121,6 +112,10 @@ h1{
 .subtitle{
     text-align:center;
     margin-top:20px;
+    font-family: Verdana;
+    color: #1f1f1f;
+    letter-spacing: 0.5px;
+     font-weight: 600;
 }
 
 .print-dash{
@@ -130,8 +125,26 @@ h1{
 
 .print-dash button{
     padding:10px;
-    background-color:turquoise;
+    background-color:rgb(11, 179, 93);
     outline:none;
     border:none;
-    border-radius:5px;
+    border-radius:10px;
+    color:white;
+    font-size: 16px;
+    padding:16 20px;
+    cursor:pointer;
+    font-weight: bold;
+}
+
+
+canvas{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: transform 0.3s ease;
+    background-color: white;
+    border-radius:10px;
+
+  
+}
+canvas:hover{
+    transform: scale(1.05);
 }

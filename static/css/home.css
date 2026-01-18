@@ -5,13 +5,11 @@
 }
 
 body{
-    background: linear-gradient(
-        135deg,
-        #667eea,
-        #6f6fe0,
-        #7367d6,
-        #764ba2
-    );
+   background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.85),
+    rgba(118, 75, 162, 0.85)
+  );
     
     animation: gradientMove 12s ease infinite;
      
@@ -23,6 +21,8 @@ body{
 .navbar h1 {
     margin: 0;
     line-height: 1;
+    font-weight: 700;        
+    letter-spacing: 0.5px;
 }
 
 
@@ -68,7 +68,8 @@ h1{
 
 .navbar-links a{
     text-decoration: none;
-    color:black;
+    color: #1f2937; 
+    font-weight: 500;
     cursor:pointer;
     font-family: 'Smooch Sans', sans-serif;
     font-size: 20px;
@@ -83,6 +84,7 @@ h1{
 
 .navbar-links a:hover{
     text-decoration: underline;
+    opacity: 1;
 
 }
 
